@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --color-gov-primary: #1B5E20;
+  --color-gov-secondary: #0D47A1;
+  --color-gov-accent: #FF9800;
+  --color-gov-text: #263238;
+  --color-gov-bg: #F2F0EF;
+
+  /* Legacy mapping */
+  --color-gov-navy: #0D47A1;
+  --color-gov-saffron: #FF9800;
+  --color-gov-green: #1B5E20;
+  --color-gov-light: #F2F0EF;
+}
+
+/* Google Fonts Import - keep it or rely on standard inclusion */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); */
+/* Better to put font import in HTML head or here. */
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gov-bg text-gov-text;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply bg-gov-primary text-white px-6 py-2 rounded shadow hover:bg-green-900 transition-colors duration-300 font-medium;
+}
+
+.btn-secondary {
+  @apply bg-gov-secondary text-white px-6 py-2 rounded shadow hover:bg-blue-800 transition-colors duration-300 font-medium;
+}
+
+.section-title {
+  @apply text-3xl font-bold text-gov-primary mb-8 text-center border-b-2 border-gov-accent pb-2 inline-block;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border-t-4 border-gov-primary;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 12s linear infinite;
+}
+
+.group:hover .animate-marquee {
+  animation-play-state: paused;
+}

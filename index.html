@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unnat Bharat Abhiyan - SVPCET Nagpur</title>
+    <meta name="description"
+        content="Official website of Unnat Bharat Abhiyan (UBA) Cell at St. Vincent Pallotti College of Engineering & Technology, Nagpur. Empowering rural India.">
+</head>
+
+<body class="bg-gov-bg flex flex-col min-h-screen">
+    <div id="loading-screen"
+        class="fixed inset-0 z-[100] flex flex-col items-center justify-end pb-20 overflow-hidden transition-opacity duration-500 ease-out bg-black">
+        <!-- Parallax Background Layer -->
+        <div id="loading-bg" class="absolute inset-0 bg-cover bg-center transition-transform duration-100 ease-out"
+            style="background-image: url('/loading-bg.png'); transform: scale(1.1);"></div>
+
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none">
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 flex flex-col items-center text-white">
+            <!-- Progress Counter -->
+            <div class="relative mb-6 w-16 h-16">
+                <div class="absolute inset-0 border-4 border-white/10 rounded-full"></div>
+                <div class="absolute inset-0 border-4 border-t-gov-accent rounded-full animate-spin"></div>
+                <div id="loading-percent"
+                    class="absolute inset-0 flex items-center justify-center text-xs font-bold text-white tracking-widest">
+                    0%</div>
+            </div>
+
+            <h2 class="text-2xl font-bold tracking-widest uppercase mb-2 drop-shadow-lg text-center px-4">Unnat Bharat
+                Abhiyan</h2>
+
+            <!-- Dynamic Text -->
+            <p id="loading-text"
+                class="text-sm text-green-300 font-light tracking-wider uppercase min-h-[1.5em] transition-opacity duration-300">
+                Initializing...</p>
+        </div>
+    </div>
+
+    <div id="navbar"></div>
+
+    <main class="flex-grow">
+
+        <!-- Hero Section -->
+        <section class="relative bg-gov-primary text-white min-h-[85vh] flex flex-col">
+            <!-- REMOVED: Blue overlay div to show pure images -->
+            <!-- Use a subtle gradient at the bottom only to ensure text is readable -->
+            <div
+                class="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none">
+            </div>
+
+            <div id="hero-bg" class="absolute inset-0 z-0 overflow-hidden"></div>
+
+
+            <!-- Slider Controls -->
+            <button id="prev-slide"
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-md transition-all focus:outline-none border border-white/20"
+                aria-label="Previous Slide">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="next-slide"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-white/10 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-md transition-all focus:outline-none border border-white/20"
+                aria-label="Next Slide">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+
+            <!-- Dynamic Hero Content Container -->
+            <div id="hero-content" class="absolute inset-0 z-20 pointer-events-none">
+
+
+                <!-- Mobile Header (Top Center) -->
+                <div class="absolute top-4 left-0 right-0 text-center z-30 md:hidden">
+                    <span
+                        class="text-xs font-bold tracking-widest text-white uppercase bg-black/30 px-4 py-1 rounded-full">
+                        Presented by UBA Team SVPCET
+                    </span>
+                </div>
+
+                <!-- Bottom Left: Buttons -->
+                <div class="absolute bottom-[54px] left-4 md:left-10 z-30 pointer-events-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/projects.html"
+                            class="px-6 py-2 bg-gov-accent/90 backdrop-blur-sm text-white text-sm font-bold uppercase tracking-wider rounded shadow-lg hover:bg-orange-600 transition-all border border-orange-500/50 hover:scale-105 text-center">
+                            View Projects
+                        </a>
+                        <a href="#about"
+                            class="px-6 py-2 bg-white/10 backdrop-blur-md border border-white/30 text-white text-sm font-bold uppercase tracking-wider rounded shadow-lg hover:bg-white/20 transition-all hover:scale-105 text-center">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bottom Right: Dynamic Description Box (Elevated) -->
+                <div class="absolute bottom-[54px] right-4 md:right-10 z-30 max-w-md w-full pointer-events-auto">
+                    <div id="hero-description-box"
+                        class="bg-black/40 backdrop-blur-md border-l-4 border-gov-accent p-6 text-left rounded-r-lg shadow-2xl transform transition-all duration-700 translate-y-0 opacity-100">
+                        <p id="hero-description-text"
+                            class="text-white/90 text-sm md:text-base font-light leading-relaxed">
+                            Loading highlights...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scrolling Ticker -->
+        <div
+            class="bg-gradient-to-r from-teal-900 via-gov-primary to-teal-900 text-white py-3 overflow-hidden relative z-30 -mt-[22px] shadow-lg border-y border-white/10">
+            <div class="flex animate-marquee whitespace-nowrap min-w-full">
+                <span class="text-lg font-bold mx-4 uppercase tracking-wider drop-shadow-sm">
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                </span>
+                <span class="text-lg font-bold mx-4 uppercase tracking-wider drop-shadow-sm">
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                    Transforming Various Villages Through Sustainable Development &nbsp;<span
+                        class="text-gov-accent">✦</span>&nbsp;
+                </span>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <section
+            class="bg-gov-bg py-12 shadow-xl relative z-30 mx-4 md:mx-auto max-w-6xl rounded-xl border border-gray-200">
+            <div class="grid grid-cols-2 md:grid-cols-4 text-center md:divide-x divide-gray-300 gap-4 md:gap-0">
+                <div class="p-6 transition-all hover:bg-white rounded-l-xl">
+                    <div class="text-4xl md:text-5xl font-extrabold text-gov-primary mb-2">5</div>
+                    <div class="text-xs md:text-sm uppercase tracking-widest text-gray-500 font-bold">Villages Adopted
+                    </div>
+                </div>
+                <div class="p-6 transition-all hover:bg-white">
+                    <div class="text-4xl md:text-5xl font-extrabold text-gov-primary mb-2">10+</div>
+                    <div class="text-xs md:text-sm uppercase tracking-widest text-gray-500 font-bold">Projects Completed
+                    </div>
+                </div>
+                <div class="p-6 transition-all hover:bg-white">
+                    <div class="text-4xl md:text-5xl font-extrabold text-gov-primary mb-2">100+</div>
+                    <div class="text-xs md:text-sm uppercase tracking-widest text-gray-500 font-bold">Student Volunteers
+                    </div>
+                </div>
+                <div class="p-6 transition-all hover:bg-white rounded-r-xl">
+                    <div class="text-4xl md:text-5xl font-extrabold text-gov-primary mb-2">20+</div>
+                    <div class="text-xs md:text-sm uppercase tracking-widest text-gray-500 font-bold">Faculty Involved
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="about" class="py-16 bg-gov-bg">
+            <div class="container-custom">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">About Unnat Bharat Abhiyan</h2>
+                    <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                        Unnat Bharat Abhiyan is inspired by the vision of transformational change in rural development
+                        processes by leveraging knowledge institutions to help build the architecture of an Inclusive
+                        India.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-7">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2000&auto=format&fit=crop"
+                            alt="Rural Development" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div class="space-y-6 md:col-span-5">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-gov-secondary font-bold text-xl">
+                                    1</div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gov-secondary mb-2">Government Initiative</h3>
+                                <p class="text-gray-600">Launched by the Ministry of Education, Govt. of India, to
+                                    connect higher education institutions with local communities.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-gov-primary font-bold text-xl">
+                                    2</div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gov-primary mb-2">Rural Development</h3>
+                                <p class="text-gray-600">Focuses on development of appropriate technologies for
+                                    sustainable growth in adopted villages.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-gov-accent font-bold text-xl">
+                                    3</div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gov-accent mb-2">Student Engagement</h3>
+                                <p class="text-gray-600">Provides students an opportunity to understand real-world
+                                    problems and implement engineering solutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="/about-uba.html"
+                                class="inline-block text-gov-primary font-semibold hover:text-gov-accent transition-colors">Read
+                                Full Mission & Vision &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 bg-gov-primary text-white text-center">
+            <div class="container-custom">
+                <h2 class="text-3xl font-bold mb-6">Join the Movement</h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Be a part of the change. Students and faculty are invited to contribute to the development of our
+                    adopted villages.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/participation.html"
+                        class="bg-white text-gov-primary px-8 py-3 rounded font-bold shadow hover:bg-gray-100 transition-colors">For
+                        Students</a>
+                    <a href="/contact.html"
+                        class="border-2 border-white text-white px-8 py-3 rounded font-bold hover:bg-white hover:text-gov-primary transition-colors">Contact
+                        UBA Cell</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

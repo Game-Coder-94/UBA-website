@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - SVPCET UBA</title>
+</head>
+
+<body class="bg-gov-bg flex flex-col min-h-screen">
+
+    <div id="navbar"></div>
+
+    <main class="flex-grow">
+        <div class="bg-[#019a71] py-12 text-white text-center">
+            <h1 class="text-4xl font-bold">Photo Gallery</h1>
+            <p class="mt-2 text-blue-100">Glimpses of our initiatives</p>
+        </div>
+
+        <div class="container-custom py-12">
+
+            <!-- Category: Visits -->
+            <h2 class="text-2xl font-bold text-gov-primary mb-6 border-b pb-2">Village Visits & Surveys</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+                <div class="aspect-w-4 aspect-h-3">
+                    <img src="https://placehold.co/600x400?text=Survey+Team"
+                        class="object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity w-full h-full">
+                </div>
+                <div class="aspect-w-4 aspect-h-3">
+                    <img src="https://placehold.co/600x400?text=Meeting+with+Villagers"
+                        class="object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity w-full h-full">
+                </div>
+                <div class="aspect-w-4 aspect-h-3">
+                    <img src="https://placehold.co/600x400?text=Data+Collection"
+                        class="object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity w-full h-full">
+                </div>
+            </div>
+
+            <!-- Category: Projects -->
+            <h2 class="text-2xl font-bold text-gov-primary mb-6 border-b pb-2">Project Implementations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+                <div class="aspect-w-4 aspect-h-3">
+                    <img src="https://placehold.co/600x400?text=Solar+Lamp+Install"
+                        class="object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity w-full h-full">
+                </div>
+                <div class="aspect-w-4 aspect-h-3">
+                    <img src="https://placehold.co/600x400?text=Drone+Testing"
+                        class="object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity w-full h-full">
+                </div>
+                <div class="aspect-w-4 aspect-h-3">
+                    <img src="https://placehold.co/600x400?text=App+Demo"
+                        class="object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity w-full h-full">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
