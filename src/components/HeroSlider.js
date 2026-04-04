@@ -5,20 +5,32 @@ export function setupHeroSlider() {
     // Slide Data: Images and unique descriptions
     const slidesData = [
         {
-            image: '/images/slider-1.jpg',
-            description: "UNNAT BHARAT ABHIYAN: Empowering rural India through higher education and sustainable development."
+            image: '/images/Hero_Section/gallery 1.jpeg',
+            description: ""
         },
         {
-            image: '/images/slider-2.jpg',
-            description: "SVPCET NAGPUR: Bridging the gap between technology and rural needs for a better tomorrow."
+            image: '/images/Hero_Section/gallery 6.jpeg',
+            description: ""
         },
         {
-            image: '/images/slider-3.jpg',
-            description: "COMMUNITY ENGAGEMENT: Students and faculty working hand-in-hand with villagers to solve real-world problems."
+            image: '/images/Hero_Section/galley 5.jpeg',
+            description: ""
         },
         {
-            image: '/images/slider-4.jpg',
-            description: "SUSTAINABLE GROWTH: Implementing eco-friendly solutions for agriculture, water management, and energy."
+            image: '/images/Hero_Section/GroupPhotodrone.jpg',
+            description: ""
+        },
+        {
+            image: '/images/Hero_Section/Nitinsir.jpg',
+            description: ""
+        },
+        {
+            image: '/images/Hero_Section/VNIT.jpg',
+            description: ""
+        },
+        {
+            image: '/images/Hero_Section/wardha.jpg',
+            description: ""
         }
     ];
 
@@ -42,7 +54,7 @@ export function setupHeroSlider() {
         const img = document.createElement('img');
         img.src = slide.image;
         img.alt = `Slide ${index + 1}`;
-        img.className = 'absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ease-in-out';
+        img.className = 'absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ease-in-out img-holder';
         img.style.opacity = '0'; // Start hidden
         img.style.zIndex = '1';
         heroContainer.appendChild(img);

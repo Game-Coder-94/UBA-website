@@ -1,8 +1,8 @@
 
 export function renderFooter() {
   return `
-      <footer class="bg-gray-900 text-white pt-12 pb-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer class="bg-[#144218] text-white pt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="col-span-1 md:col-span-2">
               <h3 class="text-xl font-bold mb-4 text-gov-accent">SVPCET UBA Cell</h3>
@@ -47,11 +47,10 @@ export function renderFooter() {
               </ul>
             </div>
           </div>
-          
-          <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
-            <p>&copy; ${new Date().getFullYear()} SVPCET UBA Cell. All rights reserved.</p>
-            <p class="mt-2 text-xs">A Government of India Initiative</p>
-          </div>
+        </div>
+        
+        <div class="w-full bg-[#f4b400] text-black text-center py-2 text-xs font-bold tracking-wider">
+          COPYRIGHT © ${new Date().getFullYear()} ALL RIGHTS RESERVED | DESIGNED BY UBA STUDENTS TEAM CE DEPT | SVPCET
         </div>
       </footer>
     `;

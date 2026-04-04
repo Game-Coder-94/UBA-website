@@ -1,7 +1,7 @@
 
 export function renderNavbar() {
   return `
-    <nav class="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
+    <nav class="bg-gradient-to-r from-teal-900 via-gov-primary to-teal-900 text-white shadow-lg sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <div class="flex items-center space-x-4">
@@ -16,13 +16,13 @@ export function renderNavbar() {
           </div>
           <div class="hidden lg:block">
             <div class="ml-10 flex items-center space-x-8">
-              <a href="/index.html" class="relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
+              <a href="/index.html" class="shine-effect relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
                 Home
                 <span class="absolute left-0 bottom-1 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
               
               <div class="relative group">
-                <a href="/about-uba.html" class="relative px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
+                <a href="/about-uba.html" class="shine-effect relative px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
                   About <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
                   <span class="absolute left-0 bottom-1 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -36,17 +36,17 @@ export function renderNavbar() {
                 </div>
               </div>
 
-              <a href="/villages.html" class="relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
+              <a href="/villages.html" class="shine-effect relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
                 Villages
                 <span class="absolute left-0 bottom-1 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="/projects.html" class="relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
+              <a href="/projects.html" class="shine-effect relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
                 Projects
                 <span class="absolute left-0 bottom-1 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
               
               <div class="relative group">
-                 <a href="/participation.html" class="relative px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
+                 <a href="/participation.html" class="shine-effect relative px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
                   Participation <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
                   <span class="absolute left-0 bottom-1 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -59,19 +59,19 @@ export function renderNavbar() {
                 </div>
               </div>
 
-              <a href="/gallery.html" class="relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
+              <a href="/gallery.html" class="shine-effect relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
                 Gallery
                 <span class="absolute left-0 bottom-1 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="/downloads.html" class="relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
+              <a href="/downloads.html" class="shine-effect relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
                 Downloads
                 <span class="absolute left-0 bottom-1 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="/news.html" class="relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
+              <a href="/news.html" class="shine-effect relative group px-1 py-2 text-sm font-medium inline-flex items-center transition-colors hover:text-white">
                 News
                 <span class="absolute left-0 bottom-1 w-0 h-0.5 bg-lime-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="/contact.html" class="bg-gov-accent hover:bg-orange-600 text-white px-6 py-2 rounded shadow-lg transition-all transform hover:-translate-y-0.5 font-bold">Contact</a>
+              <a href="/contact.html" class="shine-effect bg-gov-accent hover:bg-orange-600 text-white px-6 py-2 rounded shadow-lg transition-all transform hover:-translate-y-0.5 font-bold">Contact</a>
             </div>
           </div>
           <div class="-mr-2 flex lg:hidden">
@@ -86,7 +86,7 @@ export function renderNavbar() {
       </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="hidden lg:hidden bg-gov-primary border-t border-green-800" id="mobile-menu">
+      <div class="hidden lg:hidden bg-gradient-to-r from-teal-900 via-gov-primary to-teal-900 border-t border-green-800" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-green-700">Home</a>
           <a href="/about-uba.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-green-700">About UBA</a>

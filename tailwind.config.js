@@ -9,6 +9,7 @@ export default {
     extend: {
       colors: {
         'gov-primary': '#1B5E20', // Deep Green
+        'gov-primary-dark': '#0e3d10', // Darker Deep Green
         'gov-secondary': '#0D47A1', // Royal Blue
         'gov-accent': '#FF9800', // Saffron
         'gov-text': '#263238', // Dark Charcoal
