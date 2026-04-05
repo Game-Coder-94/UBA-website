@@ -25,7 +25,7 @@ export function setupHeroSlider() {
             description: ""
         },
         {
-            image: '/images/Hero_Section/VNIT.jpg',
+            image: '/images/Hero_Section/VNIT.jpeg',
             description: ""
         },
         {
