@@ -21,11 +21,11 @@ export function renderFooter() {
             <div>
               <h3 class="text-lg font-semibold mb-4 text-gray-200">Quick Links</h3>
               <ul class="space-y-2 text-gray-400">
-                <li><a href="/about-uba.html" class="hover:text-white transition-colors">About UBA</a></li>
-                <li><a href="/villages.html" class="hover:text-white transition-colors">Adopted Villages</a></li>
-                <li><a href="/projects.html" class="hover:text-white transition-colors">Projects</a></li>
-                <li><a href="/gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
-                <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="/static/about-uba.html" class="hover:text-white transition-colors">About UBA</a></li>
+                <li><a href="/static/villages.html" class="hover:text-white transition-colors">Adopted Villages</a></li>
+                <li><a href="/static/projects.html" class="hover:text-white transition-colors">Projects</a></li>
+                <li><a href="/static/gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+                <li><a href="/static/contact.html" class="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
   
