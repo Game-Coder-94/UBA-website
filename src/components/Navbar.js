@@ -7,7 +7,7 @@ export function renderNavbar() {
           <div class="flex items-center space-x-4">
             <div class="flex-shrink-0 bg-white p-1 rounded">
                <!-- Placeholder for Logo -->
-               <img src="/logo-placeholder.png" alt="UBA SVPCET Logo" class="h-12 w-auto" onerror="this.src='https://placehold.co/100x100?text=UBA+Logo'">
+               <img src="/images/logos/UBA_Logo.png" alt="UBA SVPCET Logo" class="h-12 w-auto" onerror="this.src='https://placehold.co/100x100?text=UBA+Logo'">
             </div>
             <div class="hidden md:block">
               <div class="text-sm font-light text-gov-accent tracking-wider">UNNAT BHARAT ABHIYAN</div>
