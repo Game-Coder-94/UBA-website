@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - SVPCET UBA</title>
+</head>
+
+<body class="bg-gov-bg flex flex-col min-h-screen">
+
+    <div id="navbar"></div>
+
+    <main class="flex-grow">
+        <div class="bg-[#144218] py-12 text-white text-center">
+            <h1 class="text-4xl font-bold">Contact Us</h1>
+            <p class="mt-2 text-blue-100">Get in touch with the UBA Cell</p>
+        </div>
+
+        <div class="container-custom py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                <!-- Contact Info & Map -->
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gov-primary mb-4">UBA Cell Office</h3>
+                        <p class="text-gray-700 mb-2">
+                            <strong>St. Vincent Pallotti College of Engineering & Technology</strong><br>
+                            Gavsi Manapur, Wardha Road,<br>
+                            Nagpur - 441108, Maharashtra, India.
+                        </p>
+                        <p class="text-gray-700 mb-2"><strong>Email:</strong> uba@stvincentngp.edu.in</p>
+                        <p class="text-gray-700"><strong>Phone:</strong> +91 123 456 7890</p>
+                    </div>
+
+                    <div
+                        class="relative bg-gray-200 rounded-lg overflow-hidden h-64 md:h-80 shadow-md transform transition-transform duration-300 hover:scale-95">
+                        <!-- Google Map Embed -->
+                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0"
+                            src="https://maps.google.com/maps?q=St.+Vincent+Pallotti+College+of+Engineering+and+Technology&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+                        <!-- Overlay Link -->
+
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gov-primary mb-6">Send us a Message</h3>
+                    <form onsubmit="event.preventDefault(); alert('Message sent!');">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="name" type="text" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="email" type="email" placeholder="Your Email">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">Subject</label>
+                            <select
+                                class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="subject">
+                                <option>General Inquiry</option>
+                                <option>Student Registration</option>
+                                <option>Village Issue Reporting</option>
+                                <option>Collaboration</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                            <textarea
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="message" rows="5" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="btn-primary w-full" type="submit">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
